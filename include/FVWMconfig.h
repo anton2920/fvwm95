@@ -12,7 +12,7 @@
 /* #undef const */
 
 /* Define as __inline if that's what the C compiler calls it.  */
-/* #undef inline */
+#define inline __inline__
 
 /* Define if you have the ANSI C header files.  */
 #define STDC_HEADERS 1

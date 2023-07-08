@@ -14,7 +14,7 @@ subdirs=libs fvwm modules utils sample.fvwmrc xpmroot pixmaps mini-icons docs
 
 RM=@RM@
 
-CFLAGS = -O
+CFLAGS = -O -ansi -std=c89 -Wno-return-type -fPIC
 
 all:
 	@for i in ${subdirs}; do \

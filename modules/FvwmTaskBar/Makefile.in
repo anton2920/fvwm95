@@ -99,19 +99,19 @@ distclean: clean
 modules: ${MODULES}
 
 CheckLockModule.so: CheckLockModule.c GoodyLoadable.h
-	${CC} ${INCLUDES} -shared CheckLockModule.c -o CheckLockModule.so
+	${CC} ${INCLUDES} -shared ${CFLAGS} CheckLockModule.c -o CheckLockModule.so
 
 GoodyModule.so: GoodyModule.c GoodyLoadable.h
-	${CC} ${INCLUDES} -shared GoodyModule.c -o GoodyModule.so
+	${CC} ${INCLUDES} -shared ${CFLAGS} GoodyModule.c -o GoodyModule.so
 
 ShowDateModule.so: ShowDateModule.c GoodyLoadable.h
-	${CC} ${INCLUDES} -shared ShowDateModule.c -o ShowDateModule.so
+	${CC} ${INCLUDES} -shared ${CFLAGS} ShowDateModule.c -o ShowDateModule.so
 
 MailCheckModule.so: MailCheckModule.c GoodyLoadable.h
-	${CC} ${INCLUDES} -shared MailCheckModule.c -o MailCheckModule.so
+	${CC} ${INCLUDES} -shared ${CFLAGS} MailCheckModule.c -o MailCheckModule.so
 
 BatStatModule.so: BatStatModule.c GoodyLoadable.h
-		  ${CC} ${INCLUDES} -shared BatStatModule.c -o BatStatModule.so
+		  ${CC} ${INCLUDES} -shared ${CFLAGS} BatStatModule.c -o BatStatModule.so
 
 ${PROG}: ${OBJS}
 	${CC} -o ${PROG} ${OBJS} ${LIBS}
